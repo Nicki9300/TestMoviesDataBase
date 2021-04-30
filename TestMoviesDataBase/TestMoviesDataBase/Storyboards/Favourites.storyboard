@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lfs-DM-P8d">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--FAVOURITES-->
+        <scene sceneID="m5k-v0-pfh">
+            <objects>
+                <viewController storyboardIdentifier="FavouritesViewController" id="sPI-Q5-vmo" customClass="FavouritesViewController" customModule="TestMoviesDataBase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7ar-BS-7yx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pxR-vQ-OkP">
+                                <rect key="frame" x="0.0" y="88" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3K1-b0-8yk"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0y5-03-TQx">
+                                <rect key="frame" x="0.0" y="138" width="414" height="724"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <mutableString key="text">На экране присутствует слайдер(Stories, Video, Favorites) с UIPageControl, скролить должно к каждой странице. На первой присутствует анимированный UIPageControl с иконкой Top(она есть всегда и не скролится). Дальше идут итемы новостей(в нашем случае видео). Остальные страницы(Video, Favorites) могут быть заполнены по желанию или показывать текст (No Results).  Так же необходимо реализовать поиск элементов. По нажатию на поиск - переходим на новый экран с UISearchBar.  Остальные элементы и анимация могут быть реализованы по желанию  будет как +. 
+
+
+В проекте необходимо использовать констрейнты. 
+Swift 4.2 или новее
+в блоке с  UIPageControl показывать Top Rated видео 
+в списке показывать Самые популярные
+приложение должно корректно работать на iphone SE и адаптировано под Iphone X и новее
+желательно использовать MVP архитектуру
+клетки создавать как отдельные xib
+поддержка  iOS11 и новее
+соблюдать стилистику кода, 
+</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3HX-pf-LCf"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pxR-vQ-OkP" firstAttribute="top" secondItem="3HX-pf-LCf" secondAttribute="top" id="0Dq-hA-hEW"/>
+                            <constraint firstItem="0y5-03-TQx" firstAttribute="top" secondItem="pxR-vQ-OkP" secondAttribute="bottom" id="Nvg-or-uWp"/>
+                            <constraint firstItem="3HX-pf-LCf" firstAttribute="bottom" secondItem="0y5-03-TQx" secondAttribute="bottom" id="Q89-DY-RE9"/>
+                            <constraint firstItem="3HX-pf-LCf" firstAttribute="trailing" secondItem="0y5-03-TQx" secondAttribute="trailing" id="VwR-1N-gS7"/>
+                            <constraint firstItem="3HX-pf-LCf" firstAttribute="trailing" secondItem="pxR-vQ-OkP" secondAttribute="trailing" id="WZL-d7-7z1"/>
+                            <constraint firstItem="pxR-vQ-OkP" firstAttribute="leading" secondItem="3HX-pf-LCf" secondAttribute="leading" id="hxl-EA-TBu"/>
+                            <constraint firstItem="0y5-03-TQx" firstAttribute="leading" secondItem="3HX-pf-LCf" secondAttribute="leading" id="tZZ-Gd-HKB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="FAVOURITES" id="gcp-b3-lsP">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="8JW-mQ-RBk"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="sliderView" destination="pxR-vQ-OkP" id="rfU-Gu-u1S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ibu-4t-xzF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="885.50724637681162" y="93.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PhM-3X-fzQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lfs-DM-P8d" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="K4b-pp-xm4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sPI-Q5-vmo" kind="relationship" relationship="rootViewController" id="PUZ-li-zF9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iup-ti-mSE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-24.637681159420293" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
