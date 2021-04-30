@@ -1,5 +1,6 @@
 # TestMoviesDataBase
 Changing the slider (Stories, Video, Favorites) by scrolling
+
 On the Stories screen, the first cell with a collection view (top movie) and a page control
 ![Simulator Screen Shot - iPhone 11 Pro - 2021-04-30 at 12 29 29](https://user-images.githubusercontent.com/79657121/116676645-e61d8f80-a9af-11eb-98d0-6d007637c42c.png)
 
